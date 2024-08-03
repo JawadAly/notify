@@ -5,6 +5,7 @@ import IconButton from '@mui/material/IconButton';
 import AddIcon from '@mui/icons-material/Add';
 import { useDispatch } from 'react-redux';
 import { addNote } from '../store/slices/NoteSlice';
+import NotesTable from './NotesTable';
 
 const NotesTaker = () =>{
     const[noteData ,setNoteData] = useState({
@@ -52,22 +53,7 @@ const NotesTaker = () =>{
                         </div>
 
                         <div className='notesTrackArea w-100 p-3'>
-                            <table className="table table-dark table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>S.No</th>
-                                        <th>Title</th>
-                                        <th>Body</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>lora</td>
-                                        <td>mora</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <NotesTable/>
                         </div>
                     </div>
                 </div>
